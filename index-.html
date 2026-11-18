@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>CodeLadder – Learn to Code</title>
+<meta name="description" content="Python, HTML, CSS, JavaScript and more. Start free with 3 lessons in every language.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn Programming from Scratch to Real Projects">
+<meta property="og:description" content="Python, HTML, CSS, JavaScript and more. Start free with 3 lessons in every language.">
+<meta property="og:url" content="https://code-leader.github.io/Code--Leader-/">
+<meta property="og:image" content="https://code-leader.github.io/Code--Leader-/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#0a1230;--cd:#101b45;--tx:#eaf0ff;--mu:#9fb0e0;--bd:#22336f;--ac:#4f7cff;--a2:#f5c44a;--cb:#070d24;--bt:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1230;--cd:#101b45;--tx:#eaf0ff;--mu:#9fb0e0;--bd:#22336f;--ac:#4f7cff;--a2:#f5c44a;--cb:#070d24}}
+:root[data-theme="dark"]{--bg:#0a1230;--cd:#101b45;--tx:#eaf0ff;--mu:#9fb0e0;--bd:#22336f;--ac:#4f7cff;--a2:#f5c44a;--cb:#070d24}
+:root[data-tier="premium"]{--bg:#0b0a08;--cd:#16130d;--tx:#f8efd8;--mu:#b8a97e;--bd:#3a3018;--ac:#d4a017;--a2:#ffe08a;--cb:#050403;--bt:#1a1300}
+:root[data-tier="elite"]{--bg:#07060f;--cd:#120f26;--tx:#f6f1ff;--mu:#b9aee0;--bd:#2f2760;--ac:#e6b422;--a2:#f7e08a;--cb:#05040c;--bt:#1a1300}
+:root[data-tier="premium"] .cd,:root[data-tier="elite"] .cd{box-shadow:0 0 0 1px #d4a01733,0 8px 24px #d4a0172b}
+html body{background:radial-gradient(900px 420px at 15% -8%,#2a4bd155,transparent 70%),var(--bg)}
+:root[data-tier="premium"] body{background:radial-gradient(900px 420px at 85% -8%,#d4a01733,transparent 70%),var(--bg)}
+:root[data-tier="elite"] body{background:radial-gradient(900px 420px at 85% -8%,#e6b42240,transparent 70%),radial-gradient(700px 400px at 0% 20%,#6a3fd433,transparent 70%),var(--bg)}
+.ed{width:100%;height:200px;margin:10px 0;border-radius:12px;border:1px solid var(--bd);background:var(--cb);color:#d6dcff;padding:12px;font:14px/1.5 ui-monospace,Menlo,Consolas,monospace;resize:vertical}
+.tag.pb{background:var(--a2);color:#1a1300;font-weight:700}
+body{border-top:4px solid var(--a2)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1120px;margin:auto;padding:0 18px}a{color:var(--ac)}h1,h2,h3{line-height:1.2;margin:0 0 12px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:10px;flex-wrap:wrap}
+.lg{font-weight:800;font-size:20px;color:var(--tx);text-decoration:none}.lg b{color:var(--ac)}
+.nl{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.nl a{color:var(--mu);text-decoration:none;font-size:15px}
+.btn{background:var(--ac);color:var(--bt);border:1.5px solid #c9d1e3;box-shadow:0 0 0 1px #ffffff26 inset,0 2px 10px #0006;padding:11px 20px;border-radius:10px;font:600 15px inherit;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.g{background:transparent;color:var(--tx);border:1.5px solid #c9d1e3aa}.btn.s{padding:7px 14px;font-size:14px}
+.hero{padding:40px 0 30px;display:grid;gap:30px;grid-template-columns:1.1fr .9fr;align-items:center}
+.hero h1{font-size:clamp(32px,6vw,52px)}.hero h1 span{background:linear-gradient(90deg,var(--ac),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.mu{color:var(--mu)}pre{background:var(--cb);color:#d6dcff;padding:16px;border-radius:12px;overflow-x:auto;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:20px}.cd .ic{font-size:30px}
+.sec{padding:36px 0}.sec>h2{font-size:28px}.pr b{font-size:30px;display:block}.pr.hot{border:2px solid var(--ac)}
+.pr ul{padding-left:18px;color:var(--mu);margin:10px 0 0}
+.st{counter-reset:s}.st .cd::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ac);color:var(--bt);font-weight:700;margin-bottom:8px}
+footer{border-top:1px solid var(--bd);margin-top:30px;padding:24px 0;color:var(--mu);font-size:14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{margin-right:14px}
+.lay{display:grid;grid-template-columns:260px 1fr;gap:18px;align-items:start}
+.li{display:flex;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--tx);font-size:15px;align-items:center}
+.li span{width:24px;height:24px;border-radius:50%;background:var(--bd);display:grid;place-items:center;font-size:12px;flex:none}
+.li.on{background:var(--cd);border:1px solid var(--ac)}.li i{margin-left:auto;font-style:normal}
+.tag{font-size:12px;padding:2px 8px;border-radius:99px;background:var(--bd);color:var(--mu)}
+#m{display:none;position:fixed;inset:0;background:#0009;z-index:9;align-items:center;justify-content:center;padding:16px;overflow:auto}#m.on{display:flex}
+.bx{background:var(--cd);border-radius:16px;padding:24px;max-width:430px;width:100%;position:relative;max-height:100%;overflow:auto}
+.x{position:absolute;right:12px;top:8px;background:none;border:0;font-size:26px;color:var(--mu);cursor:pointer}
+input,select{width:100%;padding:11px 12px;margin:0 0 10px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.er{color:#e11d48;font-size:14px;min-height:20px;margin:0 0 6px}.bank{background:var(--bg);border:1px dashed var(--ac);border-radius:12px;padding:12px 14px;font-size:15px;margin:10px 0}
+#t{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;display:none;z-index:10}
+.tm{border:1.5px solid #c9d1e3aa;border-radius:14px;overflow:hidden;background:var(--cb);margin:8px 0 14px}
+.tb{display:flex;gap:6px;align-items:center;padding:8px 12px;background:#ffffff12;font-size:13px;color:var(--mu)}
+.tb i{width:10px;height:10px;border-radius:50%;background:#ff5f56}.tb i+i{background:#ffbd2e}.tb i+i+i{background:#27c93f}.tb span{margin-left:8px}
+.tm .ed{border:0;border-radius:0;margin:0;height:260px;max-height:70vh;display:block;tab-size:2}
+.tr{padding:8px 12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--bd)}.tm select{width:auto;margin:0}
+.out{margin:0;border-radius:0;min-height:64px;max-height:340px;overflow:auto;color:#8ff0a4;white-space:pre-wrap;border-top:1px solid var(--bd)}
+article.cd{font-size:18px}article.cd pre{font-size:16px;padding:18px}article.cd h2{font-size:30px}article.cd p,article.cd li{line-height:1.75}.li{font-size:16px;padding:12px}
+article code{background:var(--bd);padding:1px 6px;border-radius:6px;font-size:.92em}
+@media(max-width:760px){.hero,.lay{grid-template-columns:1fr}}
+</style></head><body>
+<div class="w"><nav><a class="lg" href="#">Code<b>Ladder</b></a><div class="nl" id="nv"></div></nav></div>
+<main id="app"></main>
+<div class="w"><footer><div>© 2026 CodeLadder. All rights reserved. <span class="mu">· v2.8</span></div><div><a href="#" onclick="info('terms');return false">Terms</a><a href="#" onclick="info('privacy');return false">Privacy</a><a href="#" onclick="info('refund');return false">Refunds</a><a href="#" onclick="info('contact');return false">Contact</a><a href="#/feedback">Feedback</a></div></footer></div>
+<div id="m" onclick="if(event.target===this)modal()"></div><div id="t"></div>
+<script>
+const WORKER_URL='https://code-leader.olikenyow.workers.dev',SECRET='',ADMIN='',ACC={n:'Olikenyo Williams',b:'Moniepoint Business',a:'7015922520'};
+const L={py:['Python','🐍',['Hello World|print("Hello, World!")','Variables|name = "Ada"~age = 21','Data Types|print(type(3.14))','Operators|print(7 // 2, 7 % 2)','Strings|"code".upper()','Lists|nums = [1, 2, 3]~nums.append(4)','Conditionals|if age >= 18:~    print("Adult")','Loops|for i in range(3):~    print(i)','Functions|def add(a, b):~    return a + b','Classes|class Dog:~    def bark(self):~        return "Woof"','Mini Project: Calculator|def calc(a, op, b):~    if op == "+":~        return a + b~    return a * b','Next Steps|import random~print(random.randint(1, 6))']],
+js:['JavaScript','⚡',['Hello World|console.log("Hello!");','Variables|let x = 5;~const y = 10;','Data Types|typeof "hi";','Operators|console.log(5 ** 2);','Strings|`Hi ${name}`','Arrays|[1, 2, 3].map(n => n * 2);','Conditionals|if (x > 3) {~  alert("big");~}','Loops|for (let i = 0; i < 3; i++) {~  console.log(i);~}','Functions|const add = (a, b) => a + b;','DOM Events|btn.onclick = () => alert("Hi");','Mini Project: To-Do List|const todos = [];~todos.push("Learn JS");~console.log(todos);','Next Steps|fetch("/api").then(r => r.json());']],
+web:['HTML & CSS','🎨',['First Page|<h1>Hello, world</h1>','Text & Links|<a href="/about">About</a>','Images|<img src="pic.jpg" alt="A photo">','Lists & Tables|<ul>~  <li>One</li>~</ul>','Forms|<input type="email" required>','CSS Selectors|p { color: teal; }','Box Model|div { padding: 16px; }','Flexbox|.row { display: flex; gap: 8px; }','Grid|.g { display: grid; }','Responsive Design|@media (max-width: 600px) {~  .g { display: block; }~}','Mini Project: Profile Card|<div class="card">~  <h2>Ada</h2>~  <p>Web developer</p>~</div>','Next Steps|a:hover { color: gold; }']],
+java:['Java','☕',['Hello World|System.out.println("Hello");','Variables|int age = 20;','Data Types|double pi = 3.14;','Operators|int r = 7 % 3;','Strings|"java".length();','Arrays|int[] a = {1, 2, 3};','Conditionals|if (age > 18) {~  System.out.println("Adult");~}','Loops|for (int i = 0; i < 3; i++) {~  System.out.println(i);~}','Methods|static int add(int a, int b) {~  return a + b;~}','Classes & Objects|class Car {~  String color;~}','Mini Project: Grade Checker|int score = 72;~if (score >= 50) {~  System.out.println("Pass");~}','Next Steps|import java.util.ArrayList;']],
+cpp:['C++','🚀',['Hello World|std::cout << "Hello";','Variables|int age = 20;','Data Types|double pi = 3.14;','Operators|int r = 7 % 3;','Strings|std::string s = "code";','Arrays|int a[3] = {1, 2, 3};','Conditionals|if (age > 18) {~  std::cout << "Adult";~}','Loops|for (int i = 0; i < 3; i++) {~  std::cout << i;~}','Functions|int add(int a, int b) {~  return a + b;~}','Classes|class Car {~public:~  int speed;~};','Mini Project: Number Guess|int guess = 7;~if (guess == 7) {~  std::cout << "Correct!";~}','Next Steps|#include <vector>']],
+sql:['SQL','🗄️',['SELECT Basics|SELECT * FROM users;','WHERE|SELECT * FROM users WHERE age > 18;','ORDER BY|SELECT * FROM users ORDER BY name;','INSERT|INSERT INTO users (name) VALUES ("Ada");','UPDATE|UPDATE users SET age = 22 WHERE id = 1;','DELETE|DELETE FROM users WHERE id = 1;','JOINs|SELECT * FROM a JOIN b ON a.id = b.a_id;','GROUP BY|SELECT city, COUNT(*) FROM users GROUP BY city;','Aggregates|SELECT AVG(age) FROM users;','Subqueries|SELECT * FROM users WHERE id IN (SELECT uid FROM orders);','Mini Project: Student Database|CREATE TABLE students (~  id INT,~  name TEXT~);','Next Steps|CREATE INDEX idx_name ON students (name);']],
+php:['PHP','🐘',['Echo|echo "Hello";','Variables|$name = "Ada";','Strings|strlen("code");','Arrays|$a = [1, 2, 3];','Conditionals|if ($age > 18) {~  echo "Adult";~}','Loops|foreach ($a as $n) {~  echo $n;~}','Functions|function add($a, $b) {~  return $a + $b;~}','Forms|$name = $_POST["name"];','Sessions|session_start();~$_SESSION["u"] = "Ada";','MySQL|$db = new PDO($dsn, $user, $pass);','Mini Project: Contact Form|if ($_POST) {~  echo "Thanks, " . $_POST["name"];~}','Next Steps|header("Location: /thanks.php");']]};
+let db=(()=>{try{return JSON.parse(localStorage.getItem('cl'))}catch(e){return null}})()||{users:{},unl:{},used:[],me:null};db.prog=db.prog||{};
+const save=()=>{try{localStorage.setItem('cl',JSON.stringify(db))}catch(e){}};
+const $=s=>document.querySelector(s),me=()=>db.me&&db.users[db.me]?{e:db.me,n:db.users[db.me].n}:null;
+const h=s=>{let x=5381;for(const c of s+SECRET)x=((x*33)^c.charCodeAt(0))>>>0;return x.toString(36).toUpperCase().padStart(5,'0').slice(-5)};
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const hp=async p=>{try{const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p+'cl'));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}catch(e){return btoa(p)}};
+function cp(s){const d=()=>{const t=document.createElement('textarea');t.value=s;t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(e){}t.remove()};try{navigator.clipboard.writeText(s).catch(d)}catch(e){d()}}
+function toast(s){const t=$('#t');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',2800)}
+function modal(x){const m=$('#m');if(!x){m.className='';m.innerHTML='';return}m.innerHTML=`<div class="bx"><button class="x" onclick="modal()" aria-label="Close">×</button>${x}</div>`;m.className='on'}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal()});
+const tier=(k)=>{const u=me();return u&&(db.unl[u.e]||{})[k]};
+const ok=(k,i)=>{const t=TIERS[tier(k)];return i<3||(!!t&&i<t.u)};
+function nav(){const u=me();$('#nv').innerHTML=`<a href="#/languages">Languages</a><a href="#/pricing">Pricing</a><a href="#/how">How it works</a><a href="#/course">🎓 Web Dev</a><a href="#/play">▶ Practice</a>`+(u?`${{premium:'<span class="tag pb">👑 Premium</span>',elite:'<span class="tag pb">💎 Full access</span>'}[tierOf()]||''}<a href="#/account">👤 ${esc(u.n.split(' ')[0])}</a><button class="btn g s" onclick="out()">Log out</button>`:`<button class="btn g s" onclick="auth('in')">Log in</button><button class="btn s" onclick="auth('up')">Sign up</button>`)}
+function out(){db.me=null;save();location.hash='';render();toast('Logged out')}
+function auth(md){const i=md==='in';modal(`<h2>${i?'Welcome back':'Create your account'}</h2>${i?'':'<input id="n" placeholder="Full name" autocomplete="name">'}<input id="e" type="email" placeholder="Email" autocomplete="email"><input id="p" type="password" placeholder="Password (min 6 characters)" autocomplete="${i?'current-password':'new-password'}"><p class="er" id="er"></p><button class="btn" style="width:100%" onclick="go('${md}')">${i?'Log in':'Sign up'}</button><p class="mu" style="text-align:center;font-size:14px">${i?`New here? <a href="#" onclick="auth('up');return false">Create an account</a> · <a href="#" onclick="restoreUI();return false">Restore backup</a>`:`Already registered? <a href="#" onclick="auth('in');return false">Log in</a>`}</p>`)}
+async function go(md){const e=$('#e').value.trim().toLowerCase(),p=$('#p').value,n=md==='up'?$('#n').value.trim():'',er=$('#er');
+if(!/^\S+@\S+\.\S+$/.test(e))return er.textContent='Enter a valid email.';if(p.length<6)return er.textContent='Password must be at least 6 characters.';
+const H=await hp(p);if(md==='up'){if(!n)return er.textContent='Enter your name.';if(db.users[e])return er.textContent='Account already exists. Please log in.';db.users[e]={n,H}}else if(!db.users[e]||db.users[e].H!==H)return er.textContent='Incorrect email or password.';
+db.me=e;save();modal();render();toast('Welcome, '+db.users[e].n.split(' ')[0]+'!')}
+function home(){const g=Object.entries(L).map(([k,l])=>`<div class="cd"><div class="ic">${l[1]}</div><h3>${l[0]}</h3><p class="mu" style="margin:0 0 12px">${l[2].length} lessons · <b>3 free</b></p><a class="btn s" href="#/${k}/0">Start learning</a></div>`).join('');
+$('#app').innerHTML=`<div class="w"><section class="hero"><div><span class="tag">Learn at your own pace</span><h1 style="margin-top:12px">Learn to code, <span>one language at a time</span></h1><p class="mu">Short, practical lessons in ${Object.keys(L).length} popular languages. Start free with 3 lessons in every language, then unlock more only for the languages you want.</p><a class="btn" href="#/languages">Browse languages</a> <button class="btn g" onclick="auth('up')">Create free account</button></div><pre>def learn(language):
+    lesson = start_free(language)
+    if lesson.loved():
+        unlock("half" or "full")
+    return "You're a developer now 🚀"</pre></section>
+<section class="sec" id="langs"><h2>Choose a language</h2><div class="grid">${g}</div></section>
+<section class="sec" id="pricing"><h2>Simple pricing, per language</h2><div class="grid"><div class="cd pr"><h3>Free</h3><b>₦0</b><ul><li>Lessons 1–3 of every language</li><li>Account required</li></ul></div><div class="cd pr"><h3>Starter</h3><b>₦5,000</b><ul><li>Lessons 1–5 of one language</li><li>2 lessons beyond the free ones</li><li>Upgrade later: you only pay the difference</li></ul></div><div class="cd pr"><h3>Plus</h3><b>₦10,000</b><ul><li>Lessons 1–7 of one language</li><li>4 lessons beyond the free ones</li></ul></div><div class="cd pr hot"><h3>Full ⭐ Best value</h3><b>₦20,000</b><ul><li>All 12 lessons of one language</li><li>Includes 2 bonus lessons: a mini project and next steps</li><li>Each extra language: same price</li></ul></div></div></section>
+<section class="sec" id="how"><h2>How it works</h2><div class="grid st"><div class="cd"><h3>Sign up</h3><p class="mu">Create a free account and log in.</p></div><div class="cd"><h3>Try 3 free lessons</h3><p class="mu">Pick any language and begin.</p></div><div class="cd"><h3>Pay by transfer</h3><p class="mu">Pick a plan (₦5,000, ₦10,000 or ₦20,000) and transfer it to our account.</p></div><div class="cd"><h3>Enter your code</h3><p class="mu">Receive your unlock code and enter it to open the lessons.</p></div></div></section></div>`}
+function lesson(k,i){if(k==='wd')return chapter(i);const l=L[k],u=me();if(!l)return home();i=Math.min(Math.max(i,0),l[2].length-1);const [t,c]=l[2][i].split('|'),a=ok(k,i),T=tier(k);if(u&&a){pg().last=k+'/'+i;save()}
+const lst=l[2].map((x,j)=>`<a class="li ${j==i?'on':''}" href="#/${k}/${j}"><span>${j+1}</span>${x.split('|')[0]}<i>${ok(k,j)?(isD(k,j)?'✓':j<3?'<em class="tag">Free</em>':'<em class="tag pb">★</em>'):'🔒'}</i></a>`).join('');
+const body=a?`<h2>${i+1}. ${t}</h2>${intro(k,i,t)}<pre>${esc(c.replace(/~/g,'\n'))}</pre>${outro(k,i,t)}<p>${i>0?`<a class="btn g s" href="#/${k}/${i-1}">← Previous</a> `:''}${i<l[2].length-1?`<a class="btn s" href="#/${k}/${i+1}">Next lesson →</a>`:''}</p>`:
+`<h2>🔒 ${i+1}. ${t}</h2><p class="mu">This lesson is locked. Unlock it with a payment, then enter the code you receive.</p>${Object.entries(TIERS).filter(([n,x])=>x.u>i).map(([n,x])=>`<p><button class="btn ${n==='full'?'':'g'}" onclick="pay('${k}','${n}')">${T?'Upgrade to':'Unlock'} ${x.n} – ₦${due(k,n).toLocaleString()}${T?' more':''}</button></p>`).join('')}`;
+$('#app').innerHTML=`<div class="w"><p><a href="#">← All languages</a></p><h1>${l[1]} ${l[0]} ${TIERS[T]?`<span class="tag">${TIERS[T].n} access</span>`:''}</h1><div class="lay"><aside>${lst}</aside><article class="cd">${body}</article></div></div>`}
+function pay(k,t){const u=me(),amt='₦'+due(k,t).toLocaleString(),l=LN(k),wa='https://wa.me/2347015922520?text='+encodeURIComponent(`Hello, I have paid ${amt} for the ${l} ${TT(k)[t].n} plan${paid(k)?' (upgrade from '+TT(k)[tier(k)].n+')':''} on CodeLadder.
+Name: ${u.n}
+Email: ${u.e}
+My receipt is attached.`);modal(`<h2>Unlock ${l} – ${TT(k)[t].n} (${amt})</h2>${paid(k)?`<p class="mu">You already paid ₦${paid(k).toLocaleString()} for this language, so you only pay the difference.</p>`:''}${PAYSTACK_KEY?`<button class="btn" style="width:100%;margin-bottom:6px" onclick="ps('${k}','${t}')">Pay ${amt} now – instant unlock</button><p class="mu" style="text-align:center;margin:6px 0">or pay by bank transfer and enter a code</p>`:''}<p class="mu">Step 1: Transfer <b>${amt}</b> to:</p><div class="bank"><b>${ACC.n}</b><br>${ACC.b}<br>Account no: <b id="ac">${ACC.a}</b> <button class="btn g s" onclick="cp('${ACC.a}');toast('Account number copied')">Copy</button><br><span class="mu">Narration: ${l} ${t} – ${esc(u.e)}</span></div><p class="mu">Step 2: After paying, send your receipt on WhatsApp so we can confirm and send your unlock code.</p><a class="btn" style="display:block;text-align:center;margin-bottom:12px" href="${wa}" target="_blank" rel="noopener">Send receipt on WhatsApp</a><p class="mu">Step 3: Enter your unlock code here:</p><input id="cd" placeholder="e.g. PYH-1234-AB12C" style="text-transform:uppercase"><p class="er" id="er"></p><button class="btn" style="width:100%" onclick="redeem('${k}')">Unlock lessons</button>`)}
+function redeem(k){if(WORKER_URL)return wredeem(k);const u=me(),er=$('#er'),c=$('#cd').value.trim().toUpperCase(),m=/^([A-Z]+)([HF])-(\d{4})-([A-Z0-9]{5})$/.exec(c);
+if(!m||h(m[1]+m[2]+m[3])!==m[4])return er.textContent='Invalid code. Check and try again.';
+const lk=m[1].toLowerCase();if(!L[lk])return er.textContent='Invalid code.';if(db.used.includes(c))return er.textContent='This code has already been used.';
+const tr=m[2]==='F'?'full':'half',o=db.unl[u.e]=db.unl[u.e]||{};if(o[lk]!=='full')o[lk]=tr;db.used.push(c);save();modal();render();toast(L[lk][0]+' unlocked 🎉 Premium theme on 👑')}
+function admin(){$('#app').innerHTML=`<div class="w"><h1>Code generator</h1><p class="mu">Generate an unlock code after you confirm a customer's payment. Upgrades: Starter to Plus ₦5,000, Starter to Full ₦15,000, Plus to Full ₦10,000. Generate the code for the NEW plan. Web Developer course: Part 1 ₦20,000, Full ₦40,000, Part 1 to Full ₦20,000 more.</p><div class="cd" style="max-width:420px"><input id="ap" type="password" placeholder="Admin passcode"><select id="al" onchange="adminTiers()">${Object.entries(L).map(([k,l])=>`<option value="${k}">${l[0]}</option>`).join('')}<option value="wd">Web Developer course</option></select><select id="at"><option value="S">Starter – ₦5,000</option><option value="H">Plus – ₦10,000</option><option value="F">Full – ₦20,000</option></select><button class="btn" onclick="gen()">Generate code</button><p id="ao" style="font:700 20px monospace;word-break:break-all"></p></div></div>`}
+function gen(){if(WORKER_URL)return wgen();if($('#ap').value!==ADMIN)return toast('Wrong passcode');const a=$('#al').value.toUpperCase()+$('#at').value,s=String(1000+Math.floor(Math.random()*9000)),c=`${a}-${s}-${h(a+s)}`;$('#ao').textContent=c;cp(c);toast('Code generated & copied')}
+const T={terms:['Terms of Use','By creating an account you agree to use CodeLadder lawfully, keep your login private and not share or resell lesson content or unlock codes. Each code unlocks one language for one account.'],privacy:['Privacy Policy','We collect your name, email and learning progress only to run your account. We never sell your data. Contact us to request deletion of your account.'],refund:['Refund Policy','Lessons unlock instantly with a valid code, so payments are generally non-refundable. If you paid and have a problem accessing your lessons, contact us and we will fix it.'],contact:['Contact Us','Questions about payments or access? Send your payment receipt and the email you registered with on WhatsApp to <a href="https://wa.me/2347015922520" target="_blank" rel="noopener">07015922520</a>, and we will send your unlock code. You can also email <a href="mailto:codeladder26@gmail.com">codeladder26@gmail.com</a>.']};
+function info(k){modal(`<h2>${T[k][0]}</h2><p class="mu">${T[k][1]}</p>`)}
+const tierOf=()=>{const u=me(),v=Object.values(u&&db.unl[u.e]||{});return v.includes('full')?'elite':v.length?'premium':''};const skin=()=>{document.documentElement.dataset.tier=tierOf()};
+function render(){skin();nav();const hs=location.hash,m=/^#\/(\w+)\/(\d+)$/.exec(hs);
+if(hs==='#admin')return admin();if(m){if(!me()){page('home');auth('in');return}return lesson(m[1],+m[2])}const r=hs.replace('#/','');if(r==='account'){if(!me()){page('home');auth('in');return}return account()}if(r==='play'){if(!me()){page('home');auth('in');return}return play()}if(r==='feedback')return feedback();if(r==='course')return courseHome();page(['languages','pricing','how'].includes(r)?r:'home');window.scrollTo(0,0)}
+const X={py:['Every programmer starts with Hello World. The print function sends text to the screen. Anything inside quotes is a string, which Python shows exactly as written. Run the line below and you have written your first program.','A variable is a labelled box that stores a value. Write the name, an equals sign, then the value. Use clear names like age or name, never start a name with a number, and remember Python is case-sensitive.','Every value has a type: str for text, int for whole numbers, float for decimals and bool for True or False. Use type to check what you have, because mixing types is a common source of errors.'],js:['The console.log function prints a message to the browser console, your best friend for testing code. Statements usually end with a semicolon. Open DevTools with F12 and run the line to see the output.','Use let for values that will change and const for values that must stay fixed. Prefer const by default. The old var keyword is best avoided in new code.','JavaScript has strings, numbers, booleans, null, undefined, arrays and objects. The typeof operator tells you the type of a value. Beware that typeof null returns object, a famous quirk.'],web:['HTML describes the structure of a page. The h1 tag marks the main heading. Tags usually come in pairs, an opening tag and a closing tag with a slash. Save your file as index.html and open it in a browser.','Paragraphs use p tags and links use the a tag with an href attribute pointing to the destination. Attributes give extra information to a tag and always go inside the opening tag.','The img tag shows a picture. The src attribute is the file location and alt is a text description used by screen readers and shown if the image fails to load. Always write a meaningful alt.'],java:['Java programs live inside classes. The System.out.println method prints a line of text. Every statement ends with a semicolon and Java is strict about spelling and capital letters.','Java needs you to declare the type of a variable first, such as int for whole numbers or String for text. Then name it and give it a value. The type cannot change later.','Primitive types include int, double, boolean and char. A double stores decimals. Choose the smallest type that fits your data, and remember that String is an object, not a primitive.'],cpp:['C++ prints with std::cout and the << operator. You must include the iostream header first. Code runs inside the main function and each statement ends with a semicolon.','Declare a variable by giving its type, name and value, for example int age = 20. C++ is statically typed, so the compiler checks types before your program ever runs.','Common types are int, double, char, bool and std::string. Each takes a different amount of memory. Use double for decimals and watch out for integer overflow.'],sql:['SQL talks to databases. SELECT chooses which columns to read and FROM names the table. The star means every column. Keywords are conventionally written in capitals.','WHERE filters rows so you only get the ones that match a condition, like age above 18. Combine conditions with AND and OR, and put quotes around text values.','ORDER BY sorts your results. Add DESC for highest first, or ASC (the default) for lowest first. You can sort by several columns, separated by commas.'],php:['PHP runs on the server and echo outputs text to the page. PHP code sits between the opening and closing PHP tags. Each statement ends with a semicolon.','PHP variables always start with a dollar sign. You do not declare a type, PHP works it out. Names are case-sensitive, so $name and $Name are different variables.','Strings can use single or double quotes, and double quotes let you place variables inside the text. Built-in functions like strlen and strtoupper save a lot of work.']};
+const pg=()=>{const u=me();return db.prog[u.e]=db.prog[u.e]||{last:null,done:{}}};
+const isD=(k,i)=>{const u=me();return !!(u&&db.prog[u.e]&&(db.prog[u.e].done[k]||[]).includes(i))};
+function done(k,i){const d=pg().done;d[k]=d[k]||[];if(!d[k].includes(i))d[k].push(i);save();toast('Lesson completed ✅');render()}
+const intro=(k,i,t)=>`<span class="tag">Lesson ${i+1} of ${L[k][2].length}</span>${i>=3?' <span class="tag pb">★ Premium lesson</span>':''}<h3 style="margin-top:14px">What you will learn</h3><p class="mu">${(X[k]||[])[i]||(X2[k]||[])[i-3]||(X3[k]||[])[i]||`In this lesson you will work with <b>${t}</b> in ${L[k][0]}, building on what you already know. Read the example slowly, line by line, and predict the result before you run it.`}</p><h3>Example</h3>`;
+const outro=(k,i,t)=>`<h3 style="margin-top:18px">Try it yourself</h3>${term(k,L[k][2][i].split('|')[1].replace(/~/g,'\n'))}<h3>Practice</h3><ol class="mu"><li>Type the example yourself, do not copy and paste.</li><li>Change the values and predict the new result before running it.</li><li>Write one new example about something in your own life.</li></ol><h3>Recap</h3><p class="mu">You now know the basics of <b>${t}</b>. If anything feels unclear, repeat the practice until you can explain each line out loud.</p><p><button class="btn g" onclick="tryit('${k}',${i})">⤢ Full practice space</button> <button class="btn ${isD(k,i)?'g':''}" onclick="done('${k}',${i})">${isD(k,i)?'✓ Completed':'Mark as complete'}</button></p>`;
+function page(p){home();const K={home:['.hero'],languages:['#langs'],pricing:['#pricing'],how:['#how']}[p];['.hero','#langs','#pricing','#how'].forEach(s=>{if(!K.includes(s))$(s).style.display='none'});if(p!=='home')return;const u=me(),q=u&&pg().last,x=q&&q.split('/');
+const cont=x&&L[x[0]]?`<div class="cd" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px"><div><b>Continue where you stopped</b><br><span class="mu">${L[x[0]][0]} · Lesson ${+x[1]+1}</span></div><a class="btn" href="#/${q}">Resume →</a></div>`:'';
+const cs='padding:8px 14px;font-size:14px;text-decoration:none';const chips=Object.entries(L).slice(0,8).map(([k,l])=>`<a class="tag" style="${cs}" href="#/${k}/0">${l[1]} ${l[0]}</a>`).join('');
+$('.hero').insertAdjacentHTML('afterend',cont+`<div style="display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 40px">${chips}<a class="tag" style="${cs}" href="#/languages">All languages →</a></div>`+WDB+FLY)}
+const bk=()=>{const u=me();return btoa(unescape(encodeURIComponent(JSON.stringify({e:u.e,u:db.users[u.e],l:db.unl[u.e]||{},p:pg()}))))};
+function account(){const u=me(),p=pg(),un=db.unl[u.e]||{};const rows=Object.entries(L).map(([k,l])=>{const n=(p.done[k]||[]).length;return `<div class="cd"><b>${l[1]} ${l[0]}</b> <span class="tag">${TIERS[un[k]]?TIERS[un[k]].n:'Free'}</span><div style="height:8px;background:var(--bd);border-radius:9px;margin:10px 0"><div style="height:8px;width:${n*100/l[2].length}%;background:var(--ac);border-radius:9px"></div></div><span class="mu">${n}/${l[2].length} completed</span> · <a href="#/${k}/${Math.min(n,l[2].length-1)}">Open</a></div>`}).join('');
+$('#app').innerHTML=`<div class="w"><div class="sec"><h2>My account</h2><p class="mu">${esc(u.n)} · ${esc(u.e)}</p><div class="grid">${rows}</div></div><div class="cd" style="max-width:600px"><h3>Back up your progress</h3><p class="mu">Your progress is saved on this device. Copy this backup code and keep it safe. Use it to restore your account, unlocked lessons and progress on another device or after clearing your browser.</p><textarea id="bk" readonly onclick="this.select()" style="width:100%;height:90px;margin:8px 0;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);padding:8px;font:12px monospace">${bk()}</textarea><button class="btn s" onclick="cp($('#bk').value);toast('Backup copied')">Copy backup</button></div></div>`}
+function restoreUI(){modal(`<h2>Restore your account</h2><p class="mu">Paste the backup code you saved from your account page.</p><textarea id="rs" style="width:100%;height:100px;margin-bottom:8px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);padding:8px;font:12px monospace"></textarea><p class="er" id="er"></p><button class="btn" style="width:100%" onclick="restore()">Restore</button>`)}
+function restore(){try{const d=JSON.parse(decodeURIComponent(escape(atob($('#rs').value.trim()))));if(!d.e||!d.u||!d.u.H)throw 0;db.users[d.e]=d.u;db.unl[d.e]=d.l||{};db.prog[d.e]=d.p||{last:null,done:{}};db.me=d.e;save();modal();render();toast('Account restored')}catch(e){$('#er').textContent='Invalid backup code.'}}
+const PAYSTACK_KEY='';
+const TIERS={start:{n:'Starter',p:5000,u:5},half:{n:'Plus',p:10000,u:7},full:{n:'Full',p:20000,u:12}},RK={start:1,half:2,full:3};
+const paid=k=>{const t=TT(k)[tier(k)];return t?t.p:0},due=(k,t)=>Math.max(0,TT(k)[t].p-paid(k));
+const X2={py:['Operators do maths and comparisons. // divides and drops decimals, % gives the remainder and ** raises to a power.','Strings are text. Use methods like upper, lower and strip, join them with +, and place values inside using f-strings.','A list holds many items in order. Use append to add, indexes starting at 0 to read, and len to count them.','if, elif and else let your program choose. Python uses indentation, so keep the spacing exactly consistent.','Loops repeat work. for goes through a range or a list, while repeats until a condition turns false. Avoid endless loops.','A function packages code you can reuse. def names it, parameters take inputs and return sends back a result.','A class is a blueprint for objects. It groups data and functions, and each object made from it has its own values.'],
+js:['Arithmetic works as in maths, and === compares value and type. Prefer === over == to avoid surprising results.','Template strings use backticks and place variables inside with a dollar sign and braces. Methods like slice and includes help a lot.','Arrays store lists. map transforms every item, filter keeps some, and push adds a new item at the end.','if, else if and else run code based on a condition. Truthy and falsy values, like 0 and an empty string, also matter.','for repeats a set number of times and for...of walks through an array. Check the loop condition so it ends.','Functions bundle code for reuse. Arrow functions give a shorter way to write them, and return sends back a value.','The DOM is the page as JavaScript sees it. Select an element, then attach an event so code runs when a user clicks.'],
+web:['Lists organise content: ul for bullets, ol for numbers and li for each item. Tables use table, tr and td for rows and cells.','Forms collect input. Each input has a type and name, and a label helps accessibility. required stops empty submissions.','A CSS selector chooses which elements to style: by tag, by .class or by #id. Specific selectors override general ones.','Every element is a box made of content, padding, border and margin. Learning this fixes most spacing problems.','Flexbox lines items up in a row or column. Use justify-content and align-items to position them, and gap for spacing.','Grid lays out rows and columns together. Define columns with grid-template-columns for neat card layouts.','Media queries change styles by screen size. Build for phones first, then add rules for larger screens.'],
+java:['Operators include + - * / and %. Integer division drops decimals, so 7 / 2 is 3 in Java. Use double for decimals.','A String is an object with helpful methods like length, charAt and toUpperCase. Strings cannot be changed once created.','An array holds a fixed number of values of one type. Indexes start at 0, and length tells you its size.','if and else choose between paths. Compare strings with equals, not ==, and group conditions with && and ||.','for loops repeat a set number of times and while loops repeat until a condition fails. Watch your start and end values.','A method is reusable code inside a class. State its return type, name and parameters, and use void when nothing returns.','Classes are blueprints and objects are the things you build from them. Fields store data and methods describe behaviour.'],
+cpp:['Operators work like maths, and integer division drops decimals. Use == to compare and = to assign, a common mix-up.','std::string stores text and offers length, append and substr. Remember to include the string header to use it.','An array holds a fixed number of same-type values. Indexes start at 0 and going past the end causes bugs.','if, else if and else control the flow. Combine conditions with && and ||, and keep each block inside braces.','for, while and do-while repeat code. A loop that never meets its stop condition runs forever, so check it carefully.','A function has a return type, name and parameters. Declare it before main or put its code above where you call it.','A class bundles data and functions. Mark members public to use them outside, and create objects to work with the class.'],
+sql:['INSERT INTO adds a new row. List the columns, then the values in the same order, with quotes around text.','UPDATE changes existing rows. Always include a WHERE clause, otherwise every row in the table gets changed.','DELETE removes rows. Like UPDATE, a missing WHERE clause affects the whole table, so double-check before running it.','A JOIN combines rows from two tables using a shared column, such as a user id. INNER JOIN keeps only the matches.','GROUP BY gathers rows with the same value so you can count or total each group, like orders per customer.','Aggregate functions summarise data: COUNT, SUM, AVG, MIN and MAX. They are often paired with GROUP BY.','A subquery is a query inside another. Use it to filter with results from a second table, wrapped in brackets.'],
+php:['An array holds several values. Create one with square brackets, read items by index and add more with the [] shortcut.','if, elseif and else decide what runs. Use === to compare value and type, and && or || to join conditions.','foreach walks through every item in an array, while for repeats a set number of times. Pick the one that fits.','A function groups code you can call again. Use function, a name and parameters, and return to send a result back.','Forms send data to PHP in the $_POST or $_GET arrays. Always clean user input before using it.','Sessions remember a user between pages. Call session_start first, then store values in the $_SESSION array.','PDO connects PHP to a MySQL database safely. Use prepared statements so user input can never break your queries.']};
+async function wredeem(k){const u=me(),er=$('#er'),c=$('#cd').value.trim().toUpperCase();er.textContent='Checking…';
+try{const r=await fetch(WORKER_URL+'/redeem',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({code:c,email:u.e})}),d=await r.json();
+if(!d.ok||!(L[d.lang]||d.lang==='wd'))return er.textContent=d.error||'Invalid code.';grant(d.lang,d.tier)}catch(e){er.textContent='Network problem. Check your internet and try again.'}}
+async function wgen(){try{const r=await fetch(WORKER_URL+'/gen',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({pass:$('#ap').value,lang:$('#al').value,tier:$('#at').value})}),d=await r.json();if(!d.code)return toast(d.error||'Failed');$('#ao').textContent=d.code;cp(d.code);toast('Code generated & copied')}catch(e){toast('Network problem')}}
+let seed=null;
+const grant=(k,tr)=>{const u=me(),o=db.unl[u.e]=db.unl[u.e]||{};if((RK[o[k]]||0)<RK[tr])o[k]=tr;save();modal();render();toast(LN(k)+' unlocked 🎉')};
+function ps(k,t){const u=me(),amt=due(k,t),go=()=>PaystackPop.setup({key:PAYSTACK_KEY,email:u.e,amount:amt*100,currency:'NGN',ref:'CL'+Date.now(),metadata:{lang:k,tier:t},callback:r=>grant(k,t),onClose:()=>{}}).openIframe();if(window.PaystackPop)return go();const e=document.createElement('script');e.src='https://js.paystack.co/v1/inline.js';e.onload=go;e.onerror=()=>toast('Could not load payment. Check your internet.');document.head.appendChild(e)}
+addEventListener('message',e=>{const f=$('#pf');if(f&&e.source===f.contentWindow&&e.data&&e.data.cl!==undefined){const o=$('#po');o.textContent+=(o.textContent?'\n':'')+e.data.cl}});
+const FLY=`<div class="cd" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 40px"><a href="flyer.png" target="_blank" rel="noopener"><img src="flyer.png" alt="CodeLadder flyer" loading="lazy" style="width:200px;display:block;border-radius:14px;border:2px solid #c9d1e3aa"></a><div style="flex:1;min-width:200px"><h3>Know someone who wants to code?</h3><p class="mu">Share our flyer with friends and family.</p><a class="btn s" href="flyer.png" download="CodeLadder-flyer.png">Download flyer</a> <a class="btn g s" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent('Learn to code with CodeLadder. 3 free lessons in every language: https://code-leader.github.io/Code--Leader-/')}">Share on WhatsApp</a></div></div>`;
+const ea=s=>esc(s).replace(/"/g,'&quot;'),code1=(k,i)=>L[k][2][i].split('|')[1].replace(/~/g,'\n');
+const term=(k,c,pk)=>`<div class="tm"><div class="tb"><i></i><i></i><i></i><span>${pk?'Terminal':L[k][0]+' terminal'}</span></div><textarea id="pc" class="ed" spellcheck="false" autocapitalize="off" data-o="${ea(c)}">${esc(c)}</textarea>${k==='sql'?'<p class="mu" style="margin:0;padding:4px 12px;font-size:13px">Practice table: users (id, name, age, city)</p>':''}<textarea id="pi" class="ed" spellcheck="false" placeholder="Program input, one value per line (for input(), cin, Scanner, prompt...)" style="height:64px;border-top:1px solid var(--bd);font-size:13px"></textarea><div class="tr">${pk?`<select id="pl" onchange="pickLang(this.value)">${Object.entries(L).map(([x,l])=>`<option value="${x}">${l[0]}</option>`).join('')}</select>`:`<input type="hidden" id="pl" value="${k}">`}<button class="btn s" onclick="run()">▶ Run</button><button class="btn g s" onclick="$('#pc').value=$('#pc').dataset.o;$('#po').textContent=''">Reset</button></div><pre id="po" class="out"></pre><iframe id="pf" title="Preview" sandbox="allow-scripts" style="width:100%;height:240px;border:0;background:#fff;display:none"></iframe></div>`;
+const tryit=(k,i)=>{seed={l:k,c:code1(k,i)};location.hash='#/play'};
+function pickLang(k){const c=code1(k,0);$('#pc').value=c;$('#pc').dataset.o=c;$('#po').textContent=''}
+function play(){const last=(pg().last||'').split('/')[0],kk=L[last]?last:'js',s=seed||{l:kk,c:code1(kk,0)};seed=null;$('#app').innerHTML=`<div class="w"><div class="sec"><h2>Practice space</h2><p class="mu">Pick a language, write code and press Run. JavaScript, HTML/CSS, Python, SQL and C++ run in your browser. Other languages run on an online code service.</p>${term(s.l,s.c,1)}</div></div>`;$('#pl').value=s.l}
+const put=t=>{const o=$('#po');o.textContent+=(o.textContent?'\n':'')+t};
+const lib=u=>new Promise((ok,no)=>{if(document.querySelector('script[src="'+u+'"]'))return ok();const e=document.createElement('script');e.src=u;e.onload=ok;e.onerror=()=>no(new Error('Could not load the engine. Check your internet and try again.'));document.head.appendChild(e)});
+let PY,SQLJS;
+async function runPy(c,inp){put('Loading Python (the first run takes a few seconds)…');try{await lib('https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js');PY=PY||await loadPyodide({indexURL:'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/'});$('#po').textContent='';PY.setStdout({batched:put});PY.setStderr({batched:put});const q=inp?inp.split('\n'):[];PY.setStdin({stdin:()=>q.length?q.shift():undefined});const r=await PY.runPythonAsync(c);if(r!==undefined&&r!==null)put(String(r));if(!$('#po').textContent)put('(no output)')}catch(e){$('#po').textContent=String(e.message||e).split('\n').filter(x=>x.trim()).slice(-3).join('\n')}}
+async function runSql(c){put('Loading SQL engine…');try{const u='https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/';await lib(u+'sql-wasm.js');SQLJS=SQLJS||await initSqlJs({locateFile:f=>u+f});const d=new SQLJS.Database();d.run("CREATE TABLE users(id INTEGER PRIMARY KEY,name TEXT,age INTEGER,city TEXT);INSERT INTO users(name,age,city) VALUES('Ada',22,'Lagos'),('Tolu',17,'Abuja'),('Chidi',30,'Lagos');CREATE TABLE a(id INT);CREATE TABLE b(id INT,a_id INT);CREATE TABLE orders(uid INT);");$('#po').textContent='';const rs=d.exec(c);if(!rs.length)put('Done. (no rows returned)');rs.forEach(r=>{put(r.columns.join(' | '));r.values.forEach(v=>put(v.join(' | ')))})}catch(e){$('#po').textContent='Error: '+(e.message||e)}}
+async function runCpp(c,inp){put('Loading C++ engine…');try{await lib('https://cdn.jsdelivr.net/npm/JSCPP@2.0.9/dist/JSCPP.es5.min.js');if(!/main\s*\(/.test(c))c='#include <iostream>\n#include <string>\nusing namespace std;\nint main(){\n'+c.replace(/std::/g,'')+'\nreturn 0;\n}';$('#po').textContent='';let o='';JSCPP.run(c,inp?inp+'\n':'',{stdio:{write:s=>{o+=s;$('#po').textContent=o}}});if(!o)put('(no output)')}catch(e){$('#po').textContent='Error: '+(e.message||e)}}
+async function run(){const l=$('#pl').value,c=$('#pc').value,inp=($('#pi')||{}).value||'',f=$('#pf'),o=$('#po');o.textContent='';o.style.display='block';f.style.display='none';
+if(l==='web'){o.style.display='none';f.style.display='block';f.srcdoc=c.trim()[0]==='<'?c:'<style>'+c+'</style><p>Edit the CSS and press Run.</p>';return}
+if(l==='js'){f.srcdoc='<script>const P=m=>parent.postMessage({cl:m},"*"),F=a=>a.map(x=>typeof x==="object"?JSON.stringify(x):String(x)).join(" ");console.log=(...a)=>P(F(a));onerror=m=>{P("Error: "+m)};const __I='+JSON.stringify(inp?inp.split('\n'):[]).replace(/</g,'\\u003c')+';prompt=()=>__I.length?__I.shift():null;try{(0,eval)('+JSON.stringify(c).replace(/</g,'\\u003c')+')}catch(e){P("Error: "+e.message)}<\/script>';setTimeout(()=>{if(!o.textContent)o.textContent='(no output)'},700);return}
+if(l==='py')return runPy(c,inp);if(l==='sql')return runSql(c);if(l==='cpp')return runCpp(c,inp);
+return runWb(l,c,inp)}
+Object.assign(L,{
+ts:['TypeScript','🔷',['Hello World|console.log("Hello, TypeScript!");','Variables and Types|let age: number = 21;~const name: string = "Ada";','Basic Types|let ok: boolean = true;~let ids: number[] = [1, 2];','Functions|function add(a: number, b: number): number {~  return a + b;~}','Arrays|const nums: number[] = [1, 2, 3];~console.log(nums.map(n => n * 2));','Objects|const user = { name: "Ada", age: 21 };~console.log(user.name);','Interfaces|interface User {~  name: string;~  age: number;~}','Unions|let id: string | number = 5;~id = "A5";','Classes|class Dog {~  bark(): string {~    return "Woof";~  }~}','Generics|function first<T>(a: T[]): T {~  return a[0];~}','Mini Project: Task List|const tasks: string[] = [];~tasks.push("Learn TS");~console.log(tasks);','Next Steps|type Point = { x: number; y: number };']],
+cs:['C#','🎯',['Hello World|Console.WriteLine("Hello, C#!");','Variables|int age = 21;~string name = "Ada";','Data Types|double pi = 3.14;~bool ok = true;','Operators|Console.WriteLine(7 % 3);','Strings|Console.WriteLine("code".ToUpper());','Lists|var nums = new List<int> { 1, 2, 3 };~nums.Add(4);','Conditionals|int age = 20;~if (age >= 18) {~  Console.WriteLine("Adult");~}','Loops|for (int i = 0; i < 3; i++) {~  Console.WriteLine(i);~}','Methods|static int Add(int a, int b) {~  return a + b;~}','Classes|class Car {~  public string Color;~}','Mini Project: Grade Checker|int score = 72;~Console.WriteLine(score >= 50 ? "Pass" : "Fail");','Next Steps|using System.Linq;']],
+go:['Go','🐹',['Hello World|fmt.Println("Hello, Go!")','Variables|var age int = 21~name := "Ada"~fmt.Println(name, age)','Data Types|var pi float64 = 3.14~ok := true~fmt.Println(pi, ok)','Operators|fmt.Println(7 % 3)','Strings|fmt.Println(strings.ToUpper("code"))','Slices|nums := []int{1, 2, 3}~nums = append(nums, 4)~fmt.Println(nums)','Conditionals|age := 20~if age >= 18 {~  fmt.Println("Adult")~}','Loops|for i := 0; i < 3; i++ {~  fmt.Println(i)~}','Functions|func add(a, b int) int {~  return a + b~}','Structs|type Car struct {~  Color string~}','Mini Project: Odd or Even|n := 7~if n%2 == 1 {~  fmt.Println("Odd")~}','Next Steps|import "net/http"']],
+rs:['Rust','🦀',['Hello World|println!("Hello, Rust!");','Variables|let age = 21;~let mut score = 0;~score += 1;~println!("{} {}", age, score);','Data Types|let pi: f64 = 3.14;~let ok: bool = true;~println!("{} {}", pi, ok);','Operators|println!("{}", 7 % 3);','Strings|let s = String::from("code");~println!("{}", s.to_uppercase());','Vectors|let mut v = vec![1, 2, 3];~v.push(4);~println!("{:?}", v);','Conditionals|let age = 20;~if age >= 18 {~  println!("Adult");~}','Loops|for i in 0..3 {~  println!("{}", i);~}','Functions|fn add(a: i32, b: i32) -> i32 {~  a + b~}','Structs|struct Car {~  color: String,~}','Mini Project: Even or Odd|let n = 7;~if n % 2 == 0 {~  println!("Even");~} else {~  println!("Odd");~}','Next Steps|use std::collections::HashMap;']],
+rb:['Ruby','🔴',['Hello World|puts "Hello, Ruby!"','Variables|name = "Ada"~age = 21~puts name, age','Data Types|puts 3.14.class','Operators|puts 7 % 3','Strings|puts "code".upcase','Arrays|nums = [1, 2, 3]~nums << 4~puts nums.inspect','Conditionals|age = 20~if age >= 18~  puts "Adult"~end','Loops|3.times do |i|~  puts i~end','Methods|def add(a, b)~  a + b~end~puts add(2, 3)','Classes|class Dog~  def bark~    "Woof"~  end~end~puts Dog.new.bark','Mini Project: Greeter|def greet(n)~  "Hello, #{n}!"~end~puts greet("Ada")','Next Steps|puts [3, 1, 2].sort.inspect']],
+sw:['Swift','🕊️',['Hello World|print("Hello, Swift!")','Variables|var age = 21~let name = "Ada"~print(name, age)','Data Types|let pi: Double = 3.14~let ok = true~print(pi, ok)','Operators|print(7 % 3)','Strings|print("code".uppercased())','Arrays|var nums = [1, 2, 3]~nums.append(4)~print(nums)','Conditionals|let age = 20~if age >= 18 {~  print("Adult")~}','Loops|for i in 0..<3 {~  print(i)~}','Functions|func add(_ a: Int, _ b: Int) -> Int {~  return a + b~}~print(add(2, 3))','Structs|struct Car {~  var color: String~}','Mini Project: Temperature|let c = 30.0~print(c * 9 / 5 + 32)','Next Steps|import Foundation']]});
+const X3={
+ts:['console.log prints to the console. TypeScript is JavaScript with types, so any JavaScript line already works.','Add a type after the name, like age: number. The compiler then warns you when you use the wrong kind of value.','Common types are number, string, boolean and arrays like number[]. Types catch mistakes before your code runs.','Annotate parameters and the return type so every function says what it takes and gives back.','Arrays can be typed as number[] or string[]. map, filter and push work the same as in JavaScript.','Objects group related values. TypeScript checks that you only use properties that really exist.','An interface describes the shape of an object: which properties it needs and their types.','A union type, like string | number, allows more than one kind of value in the same variable.','Classes bundle data and methods. You can mark members public or private to control access.','Generics, like T, let one function work with many types while staying type-safe.'],
+cs:['Console.WriteLine prints a line of text. C# is strongly typed and every statement ends with a semicolon.','Declare a variable with its type first, such as int or string, then a name and a value.','Common types are int, double, bool, char and string. Choose double for decimals.','Operators include + - * / and %. Integer division drops decimals, so 7 / 2 is 3.','Strings have methods like ToUpper, Length and Contains. Use $ before quotes to place values inside text.','A List grows and shrinks, while an array has a fixed size. Use Add to put a new item in a List.','if, else if and else choose a path. The ternary operator gives a short one-line choice.','for repeats a set number of times and foreach walks through a collection. Check the stop condition.','A method groups reusable code. State the return type, name and parameters, or use void for none.','A class is a blueprint for objects. Fields hold data and methods describe what the object can do.'],
+go:['fmt.Println prints a line. Every Go program starts in the main function inside package main.','Use var with a type, or := to let Go work out the type. := only works inside functions.','Go has int, float64, bool and string. It never converts between types automatically.','Operators work as in maths, and / on integers drops decimals. % gives the remainder.','The strings package has helpers like ToUpper, Contains and Split. Import it before using it.','A slice is a flexible list. Use append to add items, which returns a new slice.','if needs no brackets around the condition, but the braces are required.','Go has only one loop keyword, for. It can count, run while a condition holds, or loop forever.','A function lists parameter types after the names and its return type at the end.','A struct groups fields together. It is how Go models things like a car or a user.'],
+rs:['println! prints a line. The exclamation mark shows it is a macro, not a normal function.','Variables are fixed by default. Add mut to allow changes, which makes bugs easier to spot.','Rust has i32, f64, bool and char. Types are usually worked out for you, but you can state them.','Operators work as in maths, and integer division drops decimals. Use braces inside println! to show values.','String owns its text and can grow, while &str is a borrowed view. String::from makes a new String.','A Vec is a growable list. Create one with vec! and add items with push.','if conditions must be true or false, with no automatic conversion from numbers.','for loops walk through a range like 0..3 or a collection. The end of a range is not included.','A function lists typed parameters and a return type after an arrow. A last line without a semicolon is returned.','A struct groups named fields into one type. You add behaviour to it with an impl block.'],
+rb:['puts prints a line of text. Ruby reads almost like English and needs no semicolons.','Create a variable by writing a name, an equals sign and a value. No types are needed.','Everything in Ruby is an object, so even numbers have methods like class and to_s.','Operators work as in maths. 7 / 2 is 3 for whole numbers, so use 7.0 / 2 for decimals.','Strings have methods like upcase, reverse and length. Use #{} inside double quotes to insert values.','An array holds items in order. Use << or push to add, and each to go through them.','if, elsif and else choose a path, and every block ends with end.','times, each and while repeat code. Ruby programmers usually prefer times and each.','def starts a method and end finishes it. The last value is returned automatically.','A class is a blueprint. initialize sets up each new object, and @ marks its own values.'],
+sw:['print writes a line to the screen. Swift is clean and safe, with no semicolons needed.','Use let for values that never change and var for values that do. Prefer let by default.','Common types are Int, Double, Bool and String. Swift works out the type from the value.','Operators work as in maths, and Int division drops decimals. Convert to Double for exact results.','Strings have properties and methods like count and uppercased. Put values inside text with a backslash and brackets.','An array keeps items in order. Use append to add, and square brackets to read by position.','if and else choose a path, with no brackets around the condition.','for-in loops go through a range like 0..<3 or an array. The ..< part leaves out the last number.','func defines a function. Parameters have types, and the return type comes after an arrow.','A struct groups related values and functions. Swift structs are copied when passed around.']};
+let WB;
+const wrapCode=(l,c)=>{const t=c.trim();
+if(l==='java')return /class\s/.test(c)?c:/^static\s/.test(t)?'public class Main {\n'+c+'\n  public static void main(String[] args) {}\n}':'public class Main {\n  public static void main(String[] args) {\n'+c+'\n  }\n}';
+if(l==='php')return t.startsWith('<?')?c:'<?php\n'+c;
+if(l==='cs')return /class\s/.test(c)?c:'using System;\nusing System.Collections.Generic;\nusing System.Linq;\nclass Program {\n  static void Main() {\n'+c+'\n  }\n}';
+if(l==='go'){if(/package\s/.test(c))return c;const im=['fmt','strings'].filter(p=>c.includes(p+'.')).map(p=>'import "'+p+'"').join('\n');return /^(func|type)\s/.test(t)?'package main\n'+c+'\nfunc main() {}':'package main\n'+im+'\nfunc main() {\n'+c+'\n}'}
+if(l==='rs')return /fn\s+main/.test(c)?c:'fn main() {\n'+c+'\n}';
+return c};
+async function runWb(l,c,inp){put('Running on an online code service…');try{WB=WB||await(await fetch('https://wandbox.org/api/list.json')).json();
+const nm={java:'Java',php:'PHP',cs:'C#',go:'Go',rs:'Rust',rb:'Ruby',sw:'Swift',ts:'TypeScript'}[l],cs=WB.filter(x=>x.language===nm&&!/head|trunk/i.test(x.name+x.version)).sort((a,b)=>String(b.version).localeCompare(String(a.version),undefined,{numeric:true}));
+if(!cs.length)throw 0;const r=await(await fetch('https://wandbox.org/api/compile.json',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({compiler:cs[0].name,code:wrapCode(l,c),stdin:inp?inp+'\n':'',save:false})})).json();
+$('#po').textContent='';[r.compiler_error,r.program_output,r.program_error].filter(Boolean).forEach(put);if(!$('#po').textContent)put('(no output)')}catch(e){$('#po').textContent='Could not reach the online code service. Check your internet and try again in a moment.'}}
+document.addEventListener('keydown',e=>{const t=e.target;if(!t||t.id!=='pc')return;if(e.key==='Tab'){e.preventDefault();const p=t.selectionStart;t.value=t.value.slice(0,p)+'  '+t.value.slice(t.selectionEnd);t.selectionStart=t.selectionEnd=p+2}if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();run()}});
+const VERSION='v2.8',FB_MAIL='codeladder26@gmail.com',FB_WA='2347015922520';
+function feedback(){const u=me();$('#app').innerHTML=`<div class="w"><div class="sec"><h2>Send us your feedback</h2><p class="mu">Tell us what to improve, what is not working, or what you love. Choose how you want to send it.</p><div class="cd" style="max-width:640px"><select id="ft"><option>Suggestion</option><option>Problem</option><option>Question</option><option>Praise</option></select><textarea id="fm" class="ed" style="height:160px" spellcheck="true" placeholder="Type your feedback here..."></textarea><p class="er" id="fe"></p><button class="btn" onclick="sendFb('wa')">Send on WhatsApp</button> <button class="btn g" onclick="sendFb('mail')">Send by email</button><p class="mu" style="font-size:13px;margin-top:12px">Your message opens in WhatsApp or your email app, ready to send.${u?' Your name and email are added so we can reply.':''}</p></div></div></div>`}
+function fbText(){const u=me(),t=$('#ft').value,m=$('#fm').value.trim();return m?'CodeLadder feedback ('+VERSION+')\nType: '+t+'\n'+(u?'From: '+u.n+' ('+u.e+')\n':'')+'\n'+m:''}
+function fbUrl(k){const x=fbText();return k==='wa'?'https://wa.me/'+FB_WA+'?text='+encodeURIComponent(x):'mailto:'+FB_MAIL+'?subject='+encodeURIComponent('CodeLadder feedback ('+$('#ft').value+')')+'&body='+encodeURIComponent(x)}
+function sendFb(k){if(!fbText())return $('#fe').textContent='Please type your feedback first.';$('#fe').textContent='';if(k==='wa')window.open(fbUrl(k),'_blank','noopener');else location.href=fbUrl(k)}
+const CT={half:{n:'Part 1 (chapters 1-10)',p:20000,u:10},full:{n:'Full course (all 20 chapters)',p:40000,u:20}},TT=k=>k==='wd'?CT:TIERS,LN=k=>k==='wd'?'Web Developer course':L[k][0];
+const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`(.+?)`/g,'<code>$1</code>');
+const md=s=>s.split('\n\n').map(b=>b.startsWith('~~~')?'<pre>'+esc(b.replace(/^~~~\n?/,'').replace(/\n?~~~$/,''))+'</pre>':b.startsWith('# ')?'<h3>'+inl(b.slice(2))+'</h3>':b.startsWith('- ')?'<ul>'+b.split('\n').map(x=>'<li>'+inl(x.slice(2))+'</li>').join('')+'</ul>':'<p>'+inl(b.replace(/\n/g,' '))+'</p>').join('');
+const CH=[
+{t:'How the Web Works',l:'js',c:'console.log("I am becoming a web developer!");',k:'Run the line, then change the message to your own name and run it again.',b:`# What is a website?
+
+A website is a set of files kept on a computer that is always switched on and connected to the internet. That computer is the **server**. Your phone or laptop is the **client**, and the app that shows the page is the **browser**, like Chrome.
+
+# What happens when you open a page?
+
+Think of a restaurant. You tell the waiter what you want: that is the **request**. The kitchen prepares it and the waiter brings it back: that is the **response**. Your browser then shows it. All of this takes a fraction of a second.
+
+# The three languages of the web
+
+- **HTML** is the structure, like the walls and rooms of a house.
+- **CSS** is the style, like paint and furniture.
+- **JavaScript** is the behaviour, like lights and doors that make things happen.
+
+# What does a web developer do?
+
+A **front-end** developer builds what people see and touch. A **back-end** developer builds the servers and databases behind it. Someone who does both is **full-stack**. This course takes you from the first to the second.
+
+# Your first line of code
+
+~~~
+console.log("I am becoming a web developer!");
+~~~
+
+- \`console.log\` tells the computer to print a message.
+- The text inside the quotes is the message. Quotes mark it as text.
+- The semicolon ends the instruction, like a full stop.`},
+{t:'What is HTML?',l:'web',c:'<h1>Hello, world!</h1>\n<p>My first web page.</p>',k:'Add an `<h2>` heading that says About Me and a paragraph about yourself, then run it.',b:`# What is HTML?
+
+HTML stands for **HyperText Markup Language**. It is not a programming language. It **marks up** text, telling the browser what each piece is: a heading, a paragraph, a picture or a link. Think of a school textbook with titles, headings and paragraphs. HTML does the same job for a web page.
+
+# Tags: the building blocks
+
+HTML is made of **tags**: words inside angle brackets. Most come in pairs, an **opening tag** and a **closing tag** with a slash.
+
+~~~
+<h1>Hello, world!</h1>
+<p>My first web page.</p>
+~~~
+
+- \`<h1>\` opens the main heading and \`</h1>\` closes it.
+- \`<p>\` opens a paragraph and \`</p>\` closes it.
+- Opening tag, content and closing tag together make an **element**.
+
+# Headings and common tags
+
+Headings run from \`<h1>\`, the biggest, to \`<h6>\`, the smallest. Use one \`<h1>\` per page, like a book title.
+
+- \`<p>\` a paragraph
+- \`<a>\` a link
+- \`<img>\` a picture
+- \`<ul>\` and \`<li>\` a bulleted list`},
+{t:'Your First Web Page',l:'web',c:'<h1>Ada Obi</h1>\n<p>Welcome to my first website.</p>\n<h2>My Goals</h2>\n<ul>\n  <li>Learn HTML</li>\n  <li>Learn CSS</li>\n  <li>Become a web developer</li>\n</ul>\n<a href="https://code-leader.github.io/Code--Leader-/">Visit CodeLadder</a>',k:'Change the name and goals to yours and add one more list item.',b:`# The skeleton of every page
+
+~~~
+<!DOCTYPE html>
+<html>
+  <head><title>My Page</title></head>
+  <body>
+    <h1>Welcome!</h1>
+  </body>
+</html>
+~~~
+
+- \`<!DOCTYPE html>\` tells the browser this page uses modern HTML.
+- \`<html>\` wraps the whole page.
+- \`<head>\` holds information that is not shown. \`<title>\` is the text on the browser tab.
+- \`<body>\` holds everything people see.
+
+The spaces at the start of lines are **indentation**. They are optional but make code easier to read.
+
+# Links, pictures and lists
+
+~~~
+<a href="https://code-leader.github.io/Code--Leader-/">Visit CodeLadder</a>
+<img src="photo.jpg" alt="A photo of me">
+<ul><li>Learn HTML</li><li>Learn CSS</li></ul>
+~~~
+
+- \`href\`, \`src\` and \`alt\` are **attributes**: extra information inside a tag.
+- \`alt\` describes the picture for screen readers. Always write one.
+- \`<img>\` has no closing tag. A few tags, like \`<br>\`, do not need one.
+
+# Common mistakes
+
+- Forgetting the slash in a closing tag.
+- Forgetting the quotes after \`href=\`.
+- Writing \`<hl>\` (letter L) instead of \`<h1>\`.`},
+{t:'Styling with CSS',l:'web',c:'<style>\n  body { background: #f3f6ff; font-family: Arial; padding: 20px; }\n  h1 { color: #1d4ed8; }\n  p { font-size: 20px; color: #333; }\n</style>\n<h1>Styled page</h1>\n<p>CSS makes pages beautiful.</p>',k:'Change the colours and font size, then add `text-align: center;` to the h1 rule.',b:`# What is CSS?
+
+CSS stands for **Cascading Style Sheets**. HTML builds the page and CSS makes it beautiful: colours, fonts, spacing and layout.
+
+# How a CSS rule works
+
+~~~
+h1 {
+  color: #1d4ed8;
+  font-size: 40px;
+}
+~~~
+
+- \`h1\` is the **selector**: it chooses which elements to style.
+- Inside the curly brackets are **declarations**.
+- Each declaration is a **property** (\`color\`), a colon, a **value** (\`#1d4ed8\`) and a semicolon.
+
+# Useful properties
+
+- \`color\` for text colour and \`background\` for background colour
+- \`font-size\` and \`font-family\` for text
+- \`padding\` for space inside and \`margin\` for space outside
+- \`text-align\` to centre text
+
+CSS goes inside a \`<style>\` tag, so the page below styles itself.`},
+{t:'Layout and Responsive Design',l:'web',c:'<style>\n  .row { display: flex; gap: 10px; }\n  .box { background: gold; padding: 20px; border-radius: 8px; }\n  @media (max-width: 600px) { .row { flex-direction: column; } }\n</style>\n<div class="row">\n  <div class="box">One</div>\n  <div class="box">Two</div>\n  <div class="box">Three</div>\n</div>',k:'Add a fourth box and change the gap. Then shrink your browser window to watch the layout change.',b:`# The box model
+
+Every element is a box: **content**, then **padding** (space inside), then **border**, then **margin** (space outside). Understanding this fixes most spacing problems.
+
+# Flexbox: putting things side by side
+
+~~~
+.row { display: flex; gap: 10px; }
+.box { background: gold; padding: 20px; }
+~~~
+
+- \`display: flex\` lines the children up in a row.
+- \`gap\` adds space between them.
+- \`justify-content: center\` centres them.
+
+# Responsive design
+
+People use phones, tablets and computers. A **media query** changes the style on small screens:
+
+~~~
+@media (max-width: 600px) {
+  .row { flex-direction: column; }
+}
+~~~
+
+This says: on screens 600px wide or less, stack the boxes in a column. Build for phones first, then add rules for bigger screens.`},
+{t:'JavaScript Basics',l:'js',c:'let name = "Ada";\nlet age = 21;\nif (age >= 18) {\n  console.log(name + " is an adult");\n}\nfunction greet(person) {\n  return "Hello, " + person + "!";\n}\nconsole.log(greet(name));\nfor (let i = 1; i <= 3; i++) {\n  console.log("Round " + i);\n}',k:'Change age to 15 and see what happens, then write a second function of your own.',b:`# Why JavaScript?
+
+HTML and CSS make a page that looks good but does nothing. **JavaScript** makes it think and react: calculating, deciding and responding to clicks.
+
+# Variables, decisions, functions and loops
+
+~~~
+let name = "Ada";
+let age = 21;
+if (age >= 18) {
+  console.log(name + " is an adult");
+}
+function greet(person) {
+  return "Hello, " + person + "!";
+}
+console.log(greet(name));
+for (let i = 1; i <= 3; i++) {
+  console.log("Round " + i);
+}
+~~~
+
+- \`let\` creates a **variable**, a labelled box that stores a value.
+- \`if\` makes a **decision**. The code in the braces runs only if the condition is true.
+- \`function\` packages code you can reuse. \`return\` sends a result back.
+- \`for\` is a **loop**. It repeats code: start at 1, continue while \`i <= 3\`, add 1 each time.`},
+{t:'JavaScript Meets the Page',l:'web',c:'<button id="b">Click me</button>\n<p id="msg">Waiting...</p>\n<script>\n  document.getElementById("b").onclick = function () {\n    document.getElementById("msg").textContent = "You clicked!";\n  };\n<\/script>',k:'Add a second button that changes the message to something different.',b:`# The DOM and events
+
+The browser turns your HTML into a tree of objects called the **DOM**. JavaScript can find any element and change it, and it can listen for **events** like clicks.
+
+~~~
+<button id="b">Click me</button>
+<p id="msg">Waiting...</p>
+<script>
+  document.getElementById("b").onclick = function () {
+    document.getElementById("msg").textContent = "You clicked!";
+  };
+<\/script>
+~~~
+
+- \`getElementById("b")\` finds the element whose id is b.
+- \`onclick\` says what to do when it is clicked.
+- \`textContent\` changes the words inside an element.
+- The \`<script>\` tag holds your JavaScript inside the page.
+
+This is how buttons, menus, forms and games on websites work.`},
+{t:'Git and GitHub',l:'',c:'',k:'Do this now: publish the page you built in Chapter 3 on GitHub Pages and send the link to a friend.',b:`# Why Git and GitHub?
+
+**Git** saves versions of your project so you can go back if you break something. **GitHub** keeps those versions online and can publish your website for free with **GitHub Pages**. This is exactly how CodeLadder is published.
+
+# The basic commands
+
+~~~
+git init
+git add .
+git commit -m "My first version"
+git push
+~~~
+
+- \`git init\` starts tracking a folder.
+- \`git add .\` picks all changed files.
+- \`git commit -m "..."\` saves a version with a message.
+- \`git push\` uploads it to GitHub.
+
+# Publish your first site
+
+- Create a free account at github.com and a new public repository.
+- Upload your \`index.html\` with Add file, then Upload files.
+- Open Settings, then Pages, choose the main branch and save.
+- After a minute your site is live at yourname.github.io/repository.`},
+{t:'Backend and Databases',l:'sql',c:'SELECT name, city FROM users WHERE age >= 18;',k:'The practice table is users (id, name, age, city). Change the condition to find people in Lagos: `WHERE city = "Lagos"`.',b:`# What is the back end?
+
+When you log in or buy something, the page cannot remember you alone. A **server** receives the request, checks a **database**, and sends a response. The most common server languages are JavaScript (Node.js), Python and PHP, all of which you can learn on CodeLadder.
+
+# What is a database?
+
+A database stores information in **tables**, like a spreadsheet: each row is one record and each column is one detail. **SQL** is the language you use to ask a database for information.
+
+~~~
+SELECT name, city FROM users WHERE age >= 18;
+~~~
+
+- \`SELECT name, city\` chooses which columns you want.
+- \`FROM users\` says which table.
+- \`WHERE age >= 18\` keeps only the adults.
+
+# APIs
+
+Programs also talk to each other through **APIs**. Your site asks an API for data, usually in a format called **JSON**, and shows it on the page.`},
+{t:'Projects, Portfolio and Your First Job',l:'web',c:'<h1>Ada Obi</h1>\n<p>Web developer from Lagos.</p>\n<h2>My projects</h2>\n<ul><li>My first web page</li></ul>\n<a href="mailto:you@example.com">Contact me</a>',k:'Make it yours, style it with CSS from Chapter 4, then publish it on GitHub Pages.',b:`# Build, show, earn
+
+Learning is not finished until you have built things. Three projects to build now:
+
+- **A personal portfolio**: your name, about you, your projects and how to contact you.
+- **A business page**: a landing page for a shop or small business near you.
+- **A small tool**: a calculator, to-do list or quiz using JavaScript.
+
+# Your portfolio skeleton
+
+~~~
+<h1>Ada Obi</h1>
+<p>Web developer from Lagos.</p>
+<h2>My projects</h2>
+<ul><li>My first web page</li></ul>
+<a href="mailto:you@example.com">Contact me</a>
+~~~
+
+# Getting your first work
+
+- Publish every project on GitHub Pages and keep the links in one place.
+- Offer to build a page for a local business, for free or cheaply, to get your first example.
+- Share your work on WhatsApp status, LinkedIn and X, and keep improving.
+- Keep learning: React for bigger apps, Node.js for back ends, and any language on CodeLadder.`}];
+const cpay=n=>{if(!me())return auth('up');if((RK[tier('wd')]||0)>=RK[n])return toast('You already have this plan');pay('wd',n)};
+const WDB=`<a href="#/course" class="cd" style="display:block;text-decoration:none;color:inherit;margin:0 0 20px;border-color:#f5c44a"><h3>🎓 Want to become a web developer?</h3><p class="mu" style="margin:0 0 10px">One path with HTML, CSS, JavaScript and more, written like a book. Chapter 1 is free.</p><span class="btn s">Start the course →</span></a>`;
+function courseHome(){const t=CT[tier('wd')],have=RK[tier('wd')]||0,ic=j=>isD('wd',j)?'✓':j<1?'<em class="tag">Free</em>':(t&&j<t.u)?'':'🔒';
+$('#app').innerHTML=`<div class="w"><div class="sec"><h2>🎓 Become a Web Developer</h2><p class="mu">A complete beginner-to-job-ready path in ${CH.length} chapters. Read each chapter like a book, see the code explained line by line, then run it yourself in the terminal. HTML, CSS and JavaScript are all inside, so you never have to hunt for lessons.</p>${t?`<p><span class="tag pb">You have: ${t.n}</span></p>`:''}<div class="grid"><div class="cd pr"><h3>Free preview</h3><b>₦0</b><ul><li>Chapter 1: how the web works</li></ul><a class="btn s" href="#/wd/0">Start free</a></div><div class="cd pr"><h3>Part 1</h3><b>₦20,000</b><ul><li>Chapters 1-10</li><li>HTML, CSS and JavaScript basics</li><li>Build your own portfolio</li></ul>${have>=2?'<span class="tag pb">✓ You have this</span>':`<button class="btn s" onclick="cpay('half')">Unlock Part 1</button>`}</div><div class="cd pr hot"><h3>Full course ⭐</h3><b>₦40,000</b><ul><li>All 20 chapters</li><li>APIs, Git, databases, React intro, real projects</li><li>Bought Part 1? Pay only ₦20,000 more</li></ul>${have>=3?'<span class="tag pb">✓ You have this</span>':`<button class="btn s" onclick="cpay('full')">${have?'Upgrade – pay ₦20,000 more':'Unlock full course'}</button>`}</div></div><h3 style="margin-top:24px">The ${CH.length} chapters</h3>${CH.map((x,j)=>`<a class="li" href="#/wd/${j}"><span>${j+1}</span>${x.t}<i>${ic(j)}</i></a>`).join('')}</div></div>`}
+function chapter(i){const c=CH[i];if(!c)return courseHome();const u=me(),T=tier('wd'),t=CT[T],ok=i<1||(!!t&&i<t.u);if(u&&ok){pg().last='wd/'+i;save()}
+const ic=j=>isD('wd',j)?'✓':j<1?'<em class="tag">Free</em>':(t&&j<t.u)?'':'🔒';
+const lst=CH.map((x,j)=>`<a class="li ${j==i?'on':''}" href="#/wd/${j}"><span>${j+1}</span>${x.t}<i>${ic(j)}</i></a>`).join('');
+const nav2=`<p>${i>0?`<a class="btn g s" href="#/wd/${i-1}">← Previous</a> `:''}${i<CH.length-1?`<a class="btn s" href="#/wd/${i+1}">Next chapter →</a>`:''}</p>`;
+const body=ok?`<span class="tag">Chapter ${i+1} of ${CH.length}</span>${i<1?' <span class="tag">Free preview</span>':''}<h2 style="margin-top:12px">${c.t}</h2>${md(c.b)}<h3>Try it yourself</h3><p class="mu">${inl(c.k)}</p>${c.l?term(c.l,c.c):''}<p><button class="btn ${isD('wd',i)?'g':''}" onclick="done('wd',${i})">${isD('wd',i)?'✓ Completed':'Mark as complete'}</button></p>${nav2}`:
+`<h2>🔒 Chapter ${i+1}: ${c.t}</h2><p class="mu">Unlock this chapter with a payment, then enter the code you receive.</p>${Object.entries(CT).filter(([n,x])=>x.u>i).map(([n,x])=>`<p><button class="btn ${n==='full'?'':'g'}" onclick="pay('wd','${n}')">${T?'Upgrade to':'Unlock'} ${x.n} – ₦${due('wd',n).toLocaleString()}${T?' more':''}</button></p>`).join('')}${nav2}`;
+$('#app').innerHTML=`<div class="w"><p><a href="#/course">← Course overview</a></p><h1>🎓 Web Developer Course ${T?`<span class="tag">${CT[T].n}</span>`:''}</h1><div class="lay"><aside>${lst}</aside><article class="cd">${body}</article></div></div>`}
+{const N=[
+{t:'Forms, Tables and Semantic HTML',l:'web',c:'<h2>Join our class</h2>\n<form>\n  <label>Name: <input type="text" placeholder="Your name"></label><br><br>\n  <label>Email: <input type="email"></label><br><br>\n  <select><option>HTML</option><option>CSS</option></select><br><br>\n  <textarea placeholder="Message"></textarea><br>\n  <button>Submit</button>\n</form>\n<table border="1" cellpadding="6">\n  <tr><th>Language</th><th>Used for</th></tr>\n  <tr><td>HTML</td><td>Structure</td></tr>\n</table>',k:'Add one more row to the table and a second dropdown choice to the form.',b:`# Forms: collecting information
+
+Forms let visitors send you information: sign-ups, messages and orders. A form is built from small controls.
+
+~~~
+<form>
+  <label>Name: <input type="text"></label>
+  <label>Email: <input type="email"></label>
+  <select><option>HTML</option><option>CSS</option></select>
+  <textarea placeholder="Message"></textarea>
+  <button>Submit</button>
+</form>
+~~~
+
+- \`<form>\` wraps all the controls.
+- \`<input>\` is a box to type in. Its \`type\` changes it: text, email, password, number.
+- \`<label>\` names a control and makes it easier to tap.
+- \`<select>\` makes a dropdown and \`<textarea>\` a bigger text box.
+- \`<button>\` sends the form.
+
+# Tables: rows and columns
+
+~~~
+<table border="1">
+  <tr><th>Language</th><th>Used for</th></tr>
+  <tr><td>HTML</td><td>Structure</td></tr>
+</table>
+~~~
+
+- \`<tr>\` is a row, \`<th>\` a heading cell and \`<td>\` a normal cell.
+
+# Semantic tags
+
+Tags like \`<header>\`, \`<nav>\`, \`<main>\`, \`<section>\` and \`<footer>\` describe the **meaning** of each part of a page. They help search engines and screen readers understand it.`},
+{t:'Colours, Fonts and CSS Grid',l:'web',c:'<style>\n  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }\n  .card { background: #1d4ed8; color: white; padding: 20px; border-radius: 10px; font-family: Georgia, serif; }\n  .card:hover { background: #f5c44a; color: #111; }\n</style>\n<div class="grid">\n  <div class="card">One</div><div class="card">Two</div><div class="card">Three</div>\n  <div class="card">Four</div><div class="card">Five</div><div class="card">Six</div>\n</div>',k:'Change the grid to 2 columns, pick new colours, and hover over a card to see the effect.',b:`# Colours
+
+CSS colours can be names (\`red\`), hex codes (\`#1d4ed8\`) or \`rgb(29, 78, 216)\`. Pick two or three colours and use them everywhere so your site looks professional.
+
+# Fonts
+
+\`font-family\` chooses the typeface. List fallbacks in case the first is missing: \`font-family: Georgia, serif;\`.
+
+# CSS Grid
+
+Flexbox works in one direction. **Grid** lays out rows and columns together, perfect for card layouts.
+
+~~~
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+~~~
+
+- \`display: grid\` turns on grid layout.
+- \`repeat(3, 1fr)\` makes three equal columns.
+- \`gap\` is the space between cells.
+- \`:hover\` styles an element while the mouse is over it.`},
+{t:'Project 1: Your Personal Portfolio',l:'web',c:'<style>\n  body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; background: #f3f6ff; }\n  h1 { color: #1d4ed8; }\n  .card { background: white; padding: 16px; border-radius: 10px; margin: 10px 0; }\n</style>\n<h1>Ada Obi</h1>\n<p>Web developer from Lagos.</p>\n<div class="card"><h3>My first web page</h3><p>Built with HTML and CSS.</p></div>\n<div class="card"><h3>Click counter</h3><p>Built with JavaScript.</p></div>\n<a href="mailto:you@example.com">Contact me</a>',k:'Make this portfolio yours: your name, your projects, your colours. Then publish it in Chapter 12.',b:`# Put it all together
+
+You now know HTML, CSS and JavaScript basics. Time to build something real: a page about **you**. Employers and clients love a portfolio.
+
+# What to include
+
+- A **header** with your name and one line about you.
+- An **about** section.
+- A **projects** section with one card per project.
+- A **contact** link, such as email or WhatsApp.
+
+# Build it in three steps
+
+- **Structure first:** write the HTML with no styling.
+- **Style it:** add colours, spacing and a card layout with CSS.
+- **Check on your phone:** most visitors will use one.
+
+The page below is a starting point. Make it your own.
+
+You have now finished **Part 1**. You can build and style real web pages. Part 2 adds data, Git, servers and databases.`},
+{t:'JavaScript Arrays and Objects',l:'js',c:'let skills = ["HTML", "CSS"];\nskills.push("JavaScript");\nconsole.log(skills.length, skills[0]);\nlet student = { name: "Ada", age: 21, skills: skills };\nconsole.log(student.name + " knows " + student.skills.join(", "));\nlet doubled = [1, 2, 3].map(function (n) { return n * 2; });\nconsole.log(doubled);',k:'Add a new skill to the array, add a city property to the student, and print both.',b:`# Arrays: lists of things
+
+An **array** holds many values in order. Counting starts at 0, so the first item is position 0.
+
+~~~
+let skills = ["HTML", "CSS"];
+skills.push("JavaScript");
+console.log(skills.length, skills[0]);
+~~~
+
+- \`push\` adds an item to the end.
+- \`length\` says how many items there are.
+- \`skills[0]\` reads the first item.
+
+# Objects: describing one thing
+
+An **object** groups related details as key and value pairs.
+
+~~~
+let student = { name: "Ada", age: 21 };
+console.log(student.name);
+~~~
+
+# Array methods
+
+\`map\` makes a new array by changing every item, and \`filter\` keeps only the items you want. Real websites use arrays of objects for products, posts and users.`},
+{t:'Working with Data: JSON and APIs',l:'js',c:`let text = '{"name":"Ada","age":21,"skills":["HTML","CSS"]}';\nlet person = JSON.parse(text);\nconsole.log(person.name);\nconsole.log(person.skills[1]);\nconsole.log(JSON.stringify({ city: "Lagos" }));`,k:'Add a new key to the JSON text, such as "city", and print it.',b:`# What is JSON?
+
+**JSON** is a simple text format for sending data between programs. It looks like a JavaScript object, but it is just text until you convert it.
+
+~~~
+let person = JSON.parse('{"name":"Ada","age":21}');
+console.log(person.name);
+~~~
+
+- \`JSON.parse\` turns JSON text into an object.
+- \`JSON.stringify\` turns an object back into text.
+
+# What is an API?
+
+An **API** lets one program ask another for data. Your page asks, and the server replies with JSON.
+
+~~~
+fetch("https://api.example.com/users")
+  .then(r => r.json())
+  .then(data => console.log(data));
+~~~
+
+- \`fetch\` sends the request.
+- \`r.json()\` turns the reply into an object.
+- \`then\` runs when the answer arrives, because it takes time.
+
+This is how weather apps, news feeds and payment pages work.`},
+{t:'Mini Project: To-Do App',l:'web',c:'<h2>My To-Do List</h2>\n<input id="t" placeholder="New task">\n<button onclick="add()">Add</button>\n<ul id="list"></ul>\n<script>\nfunction add() {\n  var v = document.getElementById("t").value;\n  if (v === "") return;\n  var li = document.createElement("li");\n  li.textContent = v;\n  document.getElementById("list").appendChild(li);\n  document.getElementById("t").value = "";\n}\n<\/script>',k:'Type a few tasks and press Add. Then try to add a button next to each task that removes it.',b:`# Your first real app
+
+A to-do list uses everything you know: HTML for the page, CSS for style and JavaScript for behaviour.
+
+# How it works
+
+~~~
+function add() {
+  var v = document.getElementById("t").value;
+  if (v === "") return;
+  var li = document.createElement("li");
+  li.textContent = v;
+  document.getElementById("list").appendChild(li);
+}
+~~~
+
+- Read what the user typed from the input box.
+- \`if (v === "") return;\` stops if it is empty.
+- \`createElement("li")\` makes a new list item in memory.
+- \`appendChild\` puts it on the page.
+
+# Ideas to extend it
+
+- Clear the input after adding.
+- Add a button that removes a task.
+- Click a task to cross it out.`},
+{t:'Forms and Validation',l:'web',c:'<input id="e" placeholder="Email">\n<input id="p" type="password" placeholder="Password">\n<button onclick="check()">Sign up</button>\n<p id="out"></p>\n<script>\nfunction check() {\n  var e = document.getElementById("e").value;\n  var p = document.getElementById("p").value;\n  var out = document.getElementById("out");\n  if (!e.includes("@")) { out.textContent = "Enter a valid email."; return; }\n  if (p.length < 6) { out.textContent = "Password needs 6 or more characters."; return; }\n  out.textContent = "Looks good!";\n}\n<\/script>',k:'Add a rule that the password must contain a number, and show a message if it does not.',b:`# Why validate?
+
+People make typing mistakes, and some try to break your site. **Validation** checks the data before using it.
+
+# Checking input with JavaScript
+
+~~~
+if (!e.includes("@")) {
+  out.textContent = "Enter a valid email.";
+  return;
+}
+if (p.length < 6) {
+  out.textContent = "Password needs 6 or more characters.";
+  return;
+}
+~~~
+
+- \`includes("@")\` checks the text contains an @ sign.
+- \`p.length\` counts the characters.
+- \`!\` means not.
+- \`return\` stops the function when something is wrong.
+
+# An important rule
+
+Browser checks help the user, but they can be bypassed. A real site must **also** check on the server.`},
+{t:'How Servers and APIs Work',l:'js',c:'function handle(path) {\n  if (path === "/") return "Welcome to CodeLadder";\n  if (path === "/courses") return JSON.stringify(["HTML", "CSS", "JavaScript"]);\n  return "404 Not Found";\n}\nconsole.log(handle("/"));\nconsole.log(handle("/courses"));\nconsole.log(handle("/nothing"));',k:'Add a new route called /about that returns a message about you.',b:`# Request and response
+
+Every page load is a **request** from the browser and a **response** from the server. The server looks at the address, called the **route**, and decides what to send back.
+
+# Status codes
+
+- **200** means OK.
+- **404** means not found.
+- **500** means the server had an error.
+
+# Verbs
+
+- **GET** asks for data.
+- **POST** sends new data, like a sign-up form.
+
+# A real server in Node.js
+
+~~~
+const express = require("express");
+const app = express();
+app.get("/", (req, res) => res.send("Hello"));
+app.listen(3000);
+~~~
+
+- \`app.get("/")\` handles requests to the home route.
+- \`res.send\` sends the reply.
+- \`app.listen(3000)\` starts the server.
+
+This runs on a computer or hosting service, not in the browser terminal. The terminal example above shows the same idea in plain JavaScript.`},
+{t:'Introduction to React',l:'',c:'',k:'Read the example, then write the same heading in plain HTML. Notice how React removes repetition when you need many of them.',b:`# Why React?
+
+As websites grow, plain JavaScript gets messy. **React** is a popular library for building interfaces from small reusable pieces called **components**. Many employers ask for it.
+
+# A component
+
+~~~
+function Welcome(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+~~~
+
+- A component is a function that returns what to show.
+- The HTML-looking part is called **JSX**.
+- \`props\` are inputs, so one component can show many names.
+- Curly brackets \`{}\` insert JavaScript values.
+
+# State
+
+**State** is data that changes and updates the screen automatically, such as a counter or a list of tasks. React redraws only the parts that changed.
+
+# When to learn it
+
+Learn React after you are comfortable with JavaScript. Tools like Vite create a project in minutes, and you can run it on your computer or publish it on GitHub Pages.`},
+{t:'Mini Project: Business Landing Page',l:'web',c:'<style>\n  body { margin: 0; font-family: Arial; }\n  .hero { background: #0a1230; color: white; text-align: center; padding: 60px 20px; }\n  .hero button { background: #f5c44a; border: 0; padding: 12px 24px; border-radius: 8px; font-size: 16px; }\n  .features { display: flex; gap: 10px; padding: 20px; flex-wrap: wrap; }\n  .features div { flex: 1; min-width: 150px; background: #f3f6ff; padding: 16px; border-radius: 10px; }\n</style>\n<div class="hero"><h1>Mama Tee Bakery</h1><p>Fresh bread every morning in Ikeja.</p><button>Order now</button></div>\n<div class="features"><div>Fresh daily</div><div>Fast delivery</div><div>Fair prices</div></div>',k:'Change it into a landing page for a real business near you: new name, colours and three features.',b:`# The page that earns money
+
+A **landing page** has one job: get the visitor to take one action, like calling, ordering or signing up. Small businesses pay developers for these.
+
+# Plan before you code
+
+- Who is it for?
+- What do they get?
+- What is the one action you want them to take?
+
+# The usual sections
+
+- **Hero:** a big headline, one line of explanation and one clear button.
+- **Features:** three short reasons to choose the business.
+- **Contact:** phone, WhatsApp or a map.
+
+# Tips
+
+- Use one main button and make it stand out.
+- Keep the words short.
+- Test on a phone first.`}];
+const O=CH.slice();CH.splice(0,CH.length,O[0],O[1],O[2],N[0],O[3],O[4],N[1],O[5],O[6],N[2],N[3],O[7],N[4],N[5],N[6],N[7],O[8],N[8],N[9],O[9]);CH[16].t='Databases and SQL';CH[19].t='Your First Job and Next Steps'}
+function adminTiers(){const wd=$('#al').value==='wd';$('#at').innerHTML=wd?'<option value="H">Part 1 (chapters 1-10) – ₦20,000</option><option value="F">Full course (all 20 chapters) – ₦40,000</option>':'<option value="S">Starter – ₦5,000</option><option value="H">Plus – ₦10,000</option><option value="F">Full – ₦20,000</option>'}
+addEventListener('hashchange',()=>{modal();render()});render();
+</script><!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5ecde6d93e9c4c93bb07a9cc2fc87e91"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
